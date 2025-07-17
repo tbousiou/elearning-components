@@ -1,0 +1,209 @@
+/* Attention (Σημαντική πληροφορία) */
+
+.c4l-attention,
+.c4lv-attention {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #fef6ed;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    border-left: 6px solid #f88923;
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-attention p:last-of-type,
+.c4lv-attention p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-attention::after,
+.c4lv-attention::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.5 28H28.5V30L31.5 28Z' fill='%23CA6100'/><path d='M0.5 4C0.5 1.79086 2.29086 0 4.5 0H31.5V28H4.5C2.29086 28 0.5 26.2091 0.5 24V4Z' fill='%23F88923'/><path fill-rule='evenodd' clip-rule='evenodd' d='M16 20.4C19.5346 20.4 22.4 17.5346 22.4 14C22.4 10.4654 19.5346 7.6 16 7.6C12.4654 7.6 9.6 10.4654 9.6 14C9.6 17.5346 12.4654 20.4 16 20.4ZM16 22C20.4183 22 24 18.4183 24 14C24 9.58172 20.4183 6 16 6C11.5817 6 8 9.58172 8 14C8 18.4183 11.5817 22 16 22Z' fill='white'/><path fill-rule='evenodd' clip-rule='evenodd' d='M16.7039 15.2883C16.6081 15.3774 16.4811 15.4247 16.3519 15.4247H15.7415C15.4772 15.4247 15.2363 15.2225 15.2363 14.9412V10.5144C15.2363 10.2331 15.4772 10.0309 15.7415 10.0309H16.3519C16.6162 10.0309 16.8571 10.2331 16.8571 10.5144L16.8571 14.9412C16.8571 15.0741 16.8003 15.1987 16.7039 15.2883ZM16.8571 17.4827C16.8571 17.6268 16.7953 17.7614 16.691 17.8583C16.5872 17.9547 16.4495 18.0067 16.3083 18.0067H15.7851C15.496 18.0067 15.2363 17.7859 15.2363 17.4827V16.9967C15.2363 16.6935 15.496 16.4727 15.7851 16.4727H16.3083C16.4495 16.4727 16.5872 16.5247 16.691 16.6211C16.7953 16.7179 16.8571 16.8525 16.8571 16.9967V17.4827Z' fill='white'/></svg>");
+    position: absolute;
+    top: 6px;
+    right: -3px;
+}
+
+
+/* Tip (Το ήξερες ότι) */
+
+.c4l-tip,
+.c4lv-tip {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #fbeffa;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    border-left: 6px solid #b00ca9;
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-tip p:last-of-type,
+.c4lv-tip p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-tip::after,
+.c4lv-tip::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.5 28H28.5V30L31.5 28Z' fill='%2371096C'/><path d='M0.5 4C0.5 1.79086 2.29086 0 4.5 0H31.5V28H4.5C2.29086 28 0.5 26.2091 0.5 24V4Z' fill='%23B00CA9'/><path fill-rule='evenodd' clip-rule='evenodd' d='M11.2664 14.4937C11.1761 14.3315 11.0856 14.1865 10.9926 14.0376L10.9901 14.0337C10.9698 13.9991 10.9497 13.965 10.9299 13.9313C10.5893 13.3542 10.3184 12.8951 10.1712 12.1815C10.0575 11.7237 10 11.2643 10 10.8051C10 7.60568 12.6057 5 15.8051 5C19.0049 5 21.6089 7.60563 21.6463 10.8023L21.6464 10.8044C21.6464 11.2637 21.5898 11.7413 21.475 12.2002C21.328 12.8951 21.0579 13.3527 20.7186 13.9277C20.6981 13.9626 20.6772 13.9978 20.6562 14.0336L20.6522 14.0404L20.6476 14.0468C20.5624 14.166 20.4753 14.3224 20.3815 14.491L20.3747 14.5032C20.2575 14.6879 20.1555 14.8569 20.0535 15.0266C20.0437 15.043 20.0339 15.0593 20.024 15.0756L20.0232 15.077C19.5231 15.8919 19.2504 16.3383 19.2504 17.2507V19.5727C19.2504 20.2081 18.8226 20.7543 18.239 20.9093C18.106 21.5153 17.8538 22.0269 17.4677 22.394C17.0547 22.7868 16.5032 23 15.8232 23C15.1432 23 14.5917 22.7868 14.1786 22.394C13.7919 22.0262 13.5395 21.5135 13.4067 20.9061C12.8283 20.739 12.396 20.2133 12.396 19.5727V17.2507C12.396 16.3383 12.1233 15.8919 11.6231 15.077L11.6221 15.0752C11.5849 15.0129 11.5417 14.945 11.4964 14.8737C11.4196 14.753 11.3367 14.6225 11.2664 14.4937ZM18.0524 17.2508C18.0524 17.2019 18.056 17.1566 18.0601 17.1116C18.0607 17.1056 18.0612 17.0995 18.0618 17.0935C18.0665 17.0424 18.0713 16.9911 18.0713 16.9352H13.5202C13.5311 16.989 13.5357 17.049 13.5377 17.1116C13.5391 17.157 13.5391 17.2038 13.5391 17.2508V17.8269H18.0531L18.0524 17.2508ZM20.1285 11.8969C20.2193 11.5157 20.2724 11.1587 20.2717 10.8237C20.2717 8.3575 18.2704 6.35585 15.8042 6.35585C13.338 6.35585 11.3367 8.35714 11.3367 10.8233C11.3367 11.1772 11.39 11.5341 11.4802 11.8951L11.4809 11.8978C11.604 12.4262 11.796 12.7777 12.1467 13.3507L12.1507 13.3573L12.1542 13.3642C12.1856 13.4274 12.2253 13.4916 12.2731 13.5689L12.2786 13.5778C12.3268 13.6559 12.3812 13.7447 12.4312 13.8442C12.5404 14.0441 12.6482 14.2243 12.756 14.3852L12.7587 14.3893C13.0511 14.8538 13.3047 15.2831 13.479 15.7741H18.1487C18.3093 15.3279 18.5462 14.9304 18.7917 14.5185C18.8164 14.477 18.8413 14.4352 18.8662 14.3933L18.8711 14.385C18.9788 14.2242 19.0868 14.0442 19.1961 13.8442C19.2919 13.653 19.3877 13.4995 19.4793 13.3528C19.5122 13.2942 19.5439 13.2382 19.5744 13.1844C19.8564 12.6861 20.0325 12.375 20.1271 11.9032L20.1285 11.8969ZM15.2611 7.24969C15.6198 7.20112 15.9875 7.4377 16.0185 7.81422C16.0654 8.16725 15.8144 8.5153 15.439 8.56526C14.5537 8.68507 13.8509 9.40158 13.7135 10.2937C13.6633 10.6149 13.3907 10.8707 13.0558 10.8707H12.9701L12.9585 10.8692C12.5837 10.8194 12.3295 10.4894 12.3794 10.1138L12.3797 10.1115C12.595 8.63958 13.7904 7.46571 15.2592 7.24996L15.2611 7.24969ZM14.6122 20.9567C14.5934 20.9014 14.5762 20.8427 14.5606 20.7802H17.0683C17.0515 20.8427 17.0332 20.9014 17.0134 20.9567C16.7042 21.8207 16.0492 21.8207 15.805 21.8207C15.5608 21.8207 14.9057 21.8207 14.6122 20.9567ZM13.7436 19.7956H17.8673C17.9783 19.7956 18.0711 19.7027 18.0711 19.591V18.8291H13.539V19.591C13.539 19.7027 13.6319 19.7956 13.7436 19.7956Z' fill='white'/></svg>");
+    position: absolute;
+    top: 6px;
+    right: -3px;
+}
+
+/* Reminder (Επανάληψη) */
+
+.c4l-reminder,
+.c4lv-reminder {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #eff8fd;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    border-left: 6px solid #16b9ff;
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-reminder p:last-of-type,
+.c4lv-reminder p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-reminder::after,
+.c4lv-reminder::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.5 28H28.5V30L31.5 28Z' fill='%23007BB0'/><path d='M0.5 4C0.5 1.79086 2.29086 0 4.5 0H31.5V28H4.5C2.29086 28 0.5 26.2091 0.5 24V4Z' fill='%2316B9FF'/><path d='M19.9015 6.49333C19.2437 5.83556 18.1559 5.83556 17.4981 6.49333C17.038 6.95336 16.9166 7.62053 17.0991 8.20671L13.3859 10.3895C12.1596 10.0175 10.9379 10.0492 10.1375 10.8496C9.88874 11.0984 9.88874 11.5021 10.1375 11.7509L13.7427 15.356L8.18473 20.914C7.94298 21.1487 7.93712 21.5864 8.17534 21.8247C8.41357 22.0629 8.85131 22.057 9.08602 21.8153L14.644 16.2573L18.2491 19.8625C18.4979 20.1113 18.9016 20.1113 19.1504 19.8625C19.9508 19.0621 19.9825 17.8405 19.6105 16.6141L21.7933 12.9009C22.3795 13.0834 23.0467 12.9619 23.5067 12.5019C24.1644 11.8442 24.1644 10.7563 23.5067 10.0985L19.9015 6.49333ZM19.0002 7.39462L22.6054 10.9998C22.7797 11.1741 22.7797 11.4264 22.6054 11.6006C22.4311 11.7749 22.1788 11.7749 22.0045 11.6006C21.8649 11.461 21.6689 11.3941 21.4735 11.4193C21.2781 11.4434 21.105 11.5578 21.0047 11.7274L18.3759 16.1963C18.2791 16.36 18.2603 16.5571 18.3243 16.7361C18.5619 17.3951 18.603 17.9267 18.5261 18.3368L11.6631 11.4738C12.0733 11.397 12.6049 11.438 13.2638 11.6757C13.4428 11.7396 13.6399 11.7208 13.8037 11.624L18.2725 8.99527C18.4421 8.89493 18.5566 8.72183 18.5806 8.52644C18.6058 8.33104 18.5389 8.13506 18.3993 7.9954C18.225 7.82112 18.225 7.56882 18.3993 7.39454C18.5736 7.22027 18.826 7.22035 19.0002 7.39462Z' fill='white'/></svg>");
+    position: absolute;
+    top: 6px;
+    right: -3px;
+}
+
+
+/* Learning Outcomes (Μαθησιακά αποτελέσματα) */
+
+.c4l-learningoutcomes,
+.c4lv-learningoutcomes {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #f2f5fd;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-learningoutcomes p:last-of-type,
+.c4lv-learningoutcomes p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-title,
+.c4lv-learningoutcomes .c4l-learningoutcomes-title {
+    position: relative;
+    top: -11px;
+    left: -39px;
+    padding: 6px 14px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+    color: #fff !important;
+    background-color: #1748CF;
+    font-family: inherit;
+    display: inline-block;
+    margin-top: 0;
+    filter: drop-shadow(0 1.55601px 3.11202px rgba(0, 0, 0, 0.07));
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-list,
+.c4lv-learningoutcomes .c4l-learningoutcomes-list {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding-left: 32px;
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-list>li,
+.c4lv-learningoutcomes .c4l-learningoutcomes-list>li {
+    position: relative;
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-list>li:not(:last-child),
+.c4lv-learningoutcomes .c4l-learningoutcomes-list>li:not(:last-child) {
+    margin-bottom: 21px;
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-list li::before,
+.c4lv-learningoutcomes .c4l-learningoutcomes-list li::before {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDkgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTFWMEw5IDUuNS4wIDExeiIgZmlsbD0iIzQ5N2FlOSIvPjwvc3ZnPg==");
+    background-size: 9px 11px;
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    content: "";
+    justify-self: center;
+    position: absolute;
+    left: -32px;
+    top: 7px;
+}
+
+.c4l-learningoutcomes .c4l-learningoutcomes-list li::marker,
+.c4lv-learningoutcomes .c4l-learningoutcomes-list li::marker {
+    color: transparent;
+}
+
+/* Ordered List Variant */
+.c4lv-learningoutcomes.c4l-ordered-list-variant .c4l-learningoutcomes-list {
+    counter-reset: section;
+}
+
+.c4lv-learningoutcomes.c4l-ordered-list-variant .c4l-learningoutcomes-list li::before {
+    background-image: none;
+    position: absolute;
+    left: -32px;
+    top: 0;
+    counter-increment: section;
+    content: counter(section) ". ";
+    font-weight: 700;
+    color: #497ae9;
+}
+
+
+/* Figure */
+
+.c4l-figure,
+.c4lv-figure {
+    min-width: 200px;
+    margin: 48px auto;
+}
+
+.c4l-figure img,
+.c4lv-figure img {
+    width: 100%;
+    max-height: 640px;
+    /* Set maximum height */
+    object-fit: contain;
+    /* Maintains aspect ratio */
+
+}
+
+.c4l-figure figcaption,
+.c4lv-figure figcaption {
+    font-size: 16px;
+    color: #525760;
+    margin-top: 7px;
+}
+
+.c4l-figure {
+    max-width: 100%;
+}
+
+.c4lv-figure {
+    max-width: 75%;
+}
