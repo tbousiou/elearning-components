@@ -113,6 +113,36 @@
 }
 
 
+/* Example (Παραδείγματα) */
+
+.c4l-example,
+.c4lv-example {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #ffc800;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    /* we omit thid per requirements, note that this is the fill color for the SVG */
+    /* border-left: 6px solid #4e4637; */
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-example p:last-of-type,
+.c4lv-example p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-example::after,
+.c4lv-example::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.5 28H28.5V30L31.5 28Z' fill='%234e4637'/><path d='M0.5 4C0.5 1.79086 2.29086 0 4.5 0H31.5V28H4.5C2.29086 28 0.5 26.2091 0.5 24V4Z' fill='%234e4637'/><path d='M19.742 18.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM20 14.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0' fill='white'/></svg>");
+    position: absolute;
+    top: 6px;
+    right: -3px;
+}
+
+
 /* Learning Outcomes (Μαθησιακά αποτελέσματα) */
 
 .c4l-learningoutcomes,
