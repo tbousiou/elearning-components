@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css examples</title>
+
+
+</head>
+
+<body>
+
+    <style>
+        .flipcard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 1rem;
+        }
+
+        .flipcard {
+            perspective: 1000px;
+        }
+
+        .flipcard input[type="checkbox"] {
+            display: none;
+        }
+
+        .flipcard-content {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            /* Keeps card square */
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .flipcard input:checked+.flipcard-content {
+            transform: rotateY(180deg);
+        }
+
+        .flipcard-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .flipcard-front {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .flipcard-back {
+            background: #f8f9fa;
+            color: #333;
+            transform: rotateY(180deg);
+            border: 1px solid #e9ecef;
+        }
+
+        .flipcard-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flipcard-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .flipcard-back p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+
+    <main style="max-width: 960px; margin: 0 auto; padding: 20px;">
+
+
+
+        <h2>Flipcards</h2>
+        <div class="flipcard-grid">
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">💼</div>
+                            <div class="flipcard-title">Εργασία</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Χρησιμοποιείται για την αποστολή εγγράφων και τον συντονισμό εργασιών.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">🎓</div>
+                            <div class="flipcard-title">Εκπαίδευση</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Διευκολύνει την επικοινωνία μεταξύ μαθητών και καθηγητών και την αποστολή εργασιών.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">🏥</div>
+                            <div class="flipcard-title">Υγεία</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Χρησιμοποιείται για ραντεβού, ιατρικές εξετάσεις και επικοινωνία με επαγγελματίες υγείας.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">🛒</div>
+                            <div class="flipcard-title">Αγορές</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Λήψη παραγγελιών, ειδοποιήσεων προσφορών και επιβεβαιώσεων αγορών από καταστήματα.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">🌍</div>
+                            <div class="flipcard-title">Ταξίδια</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Κρατήσεις ξενοδοχείων, εισιτήρια πτήσεων και ειδοποιήσεις για ταξιδιωτικές υπηρεσίες.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="flipcard">
+                <label>
+                    <input type="checkbox" />
+                    <div class="flipcard-content">
+                        <div class="flipcard-face flipcard-front">
+                            <div class="flipcard-emoji">🎵</div>
+                            <div class="flipcard-title">Ψυχαγωγία</div>
+                        </div>
+                        <div class="flipcard-face flipcard-back">
+                            <p>Ενημερώσεις για συναυλίες, θεατρικές παραστάσεις και άλλες πολιτιστικές εκδηλώσεις.</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
