@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css examples</title>
-
-
 </head>
 
 <body>
@@ -19,24 +17,68 @@
             padding: 2rem 1rem;
         }
 
-        .flipcard {
-            perspective: 1000px;
+        /* Modifier classes for fixed column layouts */
+        @media (min-width: 768px) {
+            .flipcard-grid.cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .flipcard-grid.cols-4 {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .flipcard-grid.cols-5 {
+                grid-template-columns: repeat(5, 1fr);
+                max-width: 1200px;
+                margin: 0 auto;
+            }
         }
 
-        .flipcard input[type="checkbox"] {
-            display: none;
+        /* Optional: Responsive adjustments for smaller screens */
+        @media (max-width: 767px) {
+
+            .flipcard-grid.cols-3,
+            .flipcard-grid.cols-4,
+            .flipcard-grid.cols-5 {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                max-width: none;
+            }
+        }
+
+        .flipcard {
+            perspective: 1000px;
+            cursor: pointer;
+            outline: none;
+            border-radius: 12px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover effect to indicate interactivity */
+        .flipcard:hover {
+            transform: translateY(-2px);
+        }
+
+        .flipcard:focus {
+            outline: 3px solid #0066cc;
+            outline-offset: 2px;
         }
 
         .flipcard-content {
             position: relative;
             width: 100%;
-            padding-top: 100%;
-            /* Keeps card square */
+            padding-top: 125%;
+            /* padding-top: 75%; Makes cards wider than they are tall */
+            /* padding-top: 100%; Makes cards square */
             transform-style: preserve-3d;
             transition: transform 0.6s ease-in-out;
         }
 
-        .flipcard input:checked+.flipcard-content {
+        .flipcard[aria-expanded="true"] .flipcard-content {
             transform: rotateY(180deg);
         }
 
@@ -52,18 +94,23 @@
             align-items: center;
             padding: 1.5rem;
             box-sizing: border-box;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .flipcard:hover .flipcard-face {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .flipcard-front {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a365d;
             color: white;
         }
 
         .flipcard-back {
-            background: #f8f9fa;
-            color: #333;
+            background: #ffffff;
+            color: #2d3748;
             transform: rotateY(180deg);
-            border: 1px solid #e9ecef;
+            border: 2px solid #e2e8f0;
         }
 
         .flipcard-emoji {
@@ -83,6 +130,18 @@
             text-align: center;
             margin: 0;
         }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
     </style>
 
     <main style="max-width: 960px; margin: 0 auto; padding: 20px;">
@@ -90,99 +149,104 @@
 
 
         <h2>Flipcards</h2>
+        <div id="flipcard-instructions" class="sr-only">
+            Πατήστε Enter ή Space για να δείτε λεπτομέρειες
+        </div>
         <div class="flipcard-grid">
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">💼</div>
-                            <div class="flipcard-title">Εργασία</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Χρησιμοποιείται για την αποστολή εγγράφων και τον συντονισμό εργασιών.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">💼</div>
+                        <div class="flipcard-title">Εργασία</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Χρησιμοποιείται για την αποστολή εγγράφων και τον συντονισμό εργασιών.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">🎓</div>
-                            <div class="flipcard-title">Εκπαίδευση</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Διευκολύνει την επικοινωνία μεταξύ μαθητών και καθηγητών και την αποστολή εργασιών.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">🎓</div>
+                        <div class="flipcard-title">Εκπαίδευση</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Διευκολύνει την επικοινωνία μεταξύ μαθητών και καθηγητών και την αποστολή εργασιών.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">🏥</div>
-                            <div class="flipcard-title">Υγεία</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Χρησιμοποιείται για ραντεβού, ιατρικές εξετάσεις και επικοινωνία με επαγγελματίες υγείας.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">🏥</div>
+                        <div class="flipcard-title">Υγεία</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Χρησιμοποιείται για ραντεβού, ιατρικές εξετάσεις και επικοινωνία με επαγγελματίες υγείας.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">🛒</div>
-                            <div class="flipcard-title">Αγορές</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Λήψη παραγγελιών, ειδοποιήσεων προσφορών και επιβεβαιώσεων αγορών από καταστήματα.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">🛒</div>
+                        <div class="flipcard-title">Αγορές</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Λήψη παραγγελιών, ειδοποιήσεων προσφορών και επιβεβαιώσεων αγορών από καταστήματα.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">🌍</div>
-                            <div class="flipcard-title">Ταξίδια</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Κρατήσεις ξενοδοχείων, εισιτήρια πτήσεων και ειδοποιήσεις για ταξιδιωτικές υπηρεσίες.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">🌍</div>
+                        <div class="flipcard-title">Ταξίδια</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Κρατήσεις ξενοδοχείων, εισιτήρια πτήσεων και ειδοποιήσεις για ταξιδιωτικές υπηρεσίες.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="flipcard">
-                <label>
-                    <input type="checkbox" />
-                    <div class="flipcard-content">
-                        <div class="flipcard-face flipcard-front">
-                            <div class="flipcard-emoji">🎵</div>
-                            <div class="flipcard-title">Ψυχαγωγία</div>
-                        </div>
-                        <div class="flipcard-face flipcard-back">
-                            <p>Ενημερώσεις για συναυλίες, θεατρικές παραστάσεις και άλλες πολιτιστικές εκδηλώσεις.</p>
-                        </div>
+            <div class="flipcard" role="button" tabindex="0" aria-expanded="false">
+                <div class="flipcard-content">
+                    <div class="flipcard-face flipcard-front">
+                        <div class="flipcard-emoji" aria-hidden="true">🎵</div>
+                        <div class="flipcard-title">Ψυχαγωγία</div>
                     </div>
-                </label>
+                    <div class="flipcard-face flipcard-back">
+                        <p>Ενημερώσεις για συναυλίες, θεατρικές παραστάσεις και άλλες πολιτιστικές εκδηλώσεις.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </main>
+
+    <script>
+        // Add click and keyboard support for flipcards
+        document.querySelectorAll('.flipcard').forEach(card => {
+            // Handle click events
+            card.addEventListener('click', function () {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+            });
+
+            // Handle keyboard events
+            card.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                }
+            });
+        });
+    </script>
 
 </body>
 
