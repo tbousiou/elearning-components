@@ -1,7 +1,11 @@
 html {
-     scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+
+.xblock .xblock h2.unit-title {
+    font-size: 1.8em;
+}
 
 div.eapsi-hlikiwmenoi,
 div.eapsi-esamea {
