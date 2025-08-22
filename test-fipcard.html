@@ -5,145 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css examples</title>
+    <link rel="stylesheet" href="flipcards.css">
 </head>
 
 <body>
 
-    <style>
-        .flipcard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            padding: 2rem 1rem;
-        }
 
-        /* Modifier classes for fixed column layouts */
-        @media (min-width: 768px) {
-            .flipcard-grid.cols-3 {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            .flipcard-grid.cols-4 {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-
-            .flipcard-grid.cols-5 {
-                grid-template-columns: repeat(5, 1fr);
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-        }
-
-        /* Optional: Responsive adjustments for smaller screens */
-        @media (max-width: 767px) {
-
-            .flipcard-grid.cols-3,
-            .flipcard-grid.cols-4,
-            .flipcard-grid.cols-5 {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                max-width: none;
-            }
-        }
-
-        .flipcard {
-            perspective: 1000px;
-            cursor: pointer;
-            outline: none;
-            border-radius: 12px;
-            position: relative;
-            transition: transform 0.2s ease;
-        }
-
-        /* Hover effect to indicate interactivity */
-        .flipcard:hover {
-            transform: translateY(-2px);
-        }
-
-        .flipcard:focus {
-            outline: 3px solid #003476;
-            outline-offset: 2px;
-        }
-
-        .flipcard-content {
-            position: relative;
-            width: 100%;
-            padding-top: 125%;
-            /* padding-top: 75%; Makes cards wider than they are tall */
-            /* padding-top: 100%; Makes cards square */
-            transform-style: preserve-3d;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .flipcard[aria-expanded="true"] .flipcard-content {
-            transform: rotateY(180deg);
-        }
-
-        .flipcard-face {
-            position: absolute;
-            inset: 0;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 1.5rem;
-            box-sizing: border-box;
-            transition: box-shadow 0.2s ease;
-        }
-
-        .flipcard:hover .flipcard-face {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .flipcard-front {
-            background: #0075b4;
-            color: white;
-        }
-
-        .flipcard-back {
-            background: #ffffff;
-            color: #2d3748;
-            transform: rotateY(180deg);
-            border: 2px solid #e2e8f0;
-            overflow-y: auto;
-        }
-
-        .flipcard-emoji {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .flipcard-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .flipcard-back p {
-            font-size: 0.95rem;
-            line-height: 1.4;
-            text-align: center;
-            margin: 0;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-    </style>
 
     <main style="max-width: 960px; margin: 0 auto; padding: 20px;">
 
@@ -229,25 +96,7 @@
 
     </main>
 
-    <script>
-        // Add click and keyboard support for flipcards
-        document.querySelectorAll('.flipcard').forEach(card => {
-            // Handle click events
-            card.addEventListener('click', function () {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !isExpanded);
-            });
-
-            // Handle keyboard events
-            card.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded);
-                }
-            });
-        });
-    </script>
+    <script src="flipcards.js"></script>
 
 </body>
 
