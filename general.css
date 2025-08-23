@@ -7,6 +7,11 @@ html {
     font-size: 1.8em;
 }
 
+a.external-link::after {
+  content: " (ανοίγει σε νέα καρτέλα) ↗";
+  color: #555;
+}
+
 div.eapsi-hlikiwmenoi,
 div.eapsi-esamea {
     font-family: "Noto Sans", "Liberation Sans", sans-serif !important;
