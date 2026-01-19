@@ -1,4 +1,4 @@
-/* Built on Δευ 19 Ιαν 2026 18:10:36 EET */
+/* Built on Δευ 19 Ιαν 2026 21:06:28 EET */
 
 /* General Styles */
 html {
@@ -284,7 +284,7 @@ div.eapsi-esamea ul ul {
 /* Figure */
 
 .c4l-figure {
-    max-width: 800px; /* Limits the whole container */
+    max-width: 900px; /* Limits the whole container */
     width: 100%;      /* Allows it to shrink on mobile */
     margin: 40px auto; /* Centers the figure and adds vertical space */
 }

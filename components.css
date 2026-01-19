@@ -230,7 +230,7 @@
 /* Figure */
 
 .c4l-figure {
-    max-width: 800px; /* Limits the whole container */
+    max-width: 900px; /* Limits the whole container */
     width: 100%;      /* Allows it to shrink on mobile */
     margin: 40px auto; /* Centers the figure and adds vertical space */
 }
