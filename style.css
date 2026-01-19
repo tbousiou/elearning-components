@@ -1,4 +1,4 @@
-/* Built on Δευ 19 Ιαν 2026 17:48:43 EET */
+/* Built on Δευ 19 Ιαν 2026 18:10:36 EET */
 
 /* General Styles */
 html {
@@ -10,8 +10,9 @@ html {
 }
 
 a.external-link::after {
-  content: " (ανοίγει σε νέα καρτέλα) ↗";
-  color: #555;
+ /* Syntax: content: "visible text" / "accessible description"; */
+ content: " (ανοίγει σε νέα καρτέλα) ↗" / " (ανοίγει σε νέα καρτέλα)";
+ color: #555;
 }
 
 div.eapsi-hlikiwmenoi,
@@ -299,6 +300,6 @@ div.eapsi-esamea ul ul {
     padding: 8px 0;
     font-size: 1rem;      /* Was 16px */
     color: #555;      /* Stylized caption text */
-    text-align: center;
+    text-align: left;
 }
 
