@@ -1,3 +1,5 @@
+/* Built on Δευ 19 Ιαν 2026 17:48:43 EET */
+
 /* General Styles */
 html {
     scroll-behavior: smooth;
@@ -14,7 +16,6 @@ a.external-link::after {
 
 div.eapsi-hlikiwmenoi,
 div.eapsi-esamea {
-    font-family: "Noto Sans", "Liberation Sans", sans-serif !important;
     font-size: 1.25rem;
     line-height: 1.5;
     font-style: 400;
@@ -49,9 +50,7 @@ div.eapsi-hlikiwmenoi ul ul,
 div.eapsi-esamea ul ul {
     list-style-type: circle !important;
 }
-
 /* Components Styles */
-
 /* Attention (Σημαντική πληροφορία) */
 .c4l-attention,
 .c4lv-attention {
@@ -282,34 +281,24 @@ div.eapsi-esamea ul ul {
 
 
 /* Figure */
-.c4l-figure,
-.c4lv-figure {
-    min-width: 200px;
-    margin: 48px auto;
-}
-
-.c4l-figure img,
-.c4lv-figure img {
-    width: 100%;
-    max-height: 640px;
-    /* Set maximum height */
-    object-fit: contain;
-    /* Maintains aspect ratio */
-
-}
-
-.c4l-figure figcaption,
-.c4lv-figure figcaption {
-    font-size: 16px;
-    color: #525760;
-    margin-top: 7px;
-}
 
 .c4l-figure {
-    max-width: 100%;
+    max-width: 800px; /* Limits the whole container */
+    width: 100%;      /* Allows it to shrink on mobile */
+    margin: 40px auto; /* Centers the figure and adds vertical space */
 }
 
-.c4lv-figure {
-    max-width: 75%;
+.c4l-figure  img {
+    width: 100%;      /* Makes image fill the 600px container */
+    height: auto;     /* Maintains aspect ratio */
+    display: block;   /* Removes bottom whitespace gap */
+}
+
+
+.c4l-figure figcaption {
+    padding: 8px 0;
+    font-size: 1rem;      /* Was 16px */
+    color: #555;      /* Stylized caption text */
+    text-align: center;
 }
 
