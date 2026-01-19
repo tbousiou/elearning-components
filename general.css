@@ -7,8 +7,9 @@ html {
 }
 
 a.external-link::after {
-  content: " (ανοίγει σε νέα καρτέλα) ↗";
-  color: #555;
+ /* Syntax: content: "visible text" / "accessible description"; */
+ content: " (ανοίγει σε νέα καρτέλα) ↗" / " (ανοίγει σε νέα καρτέλα)";
+ color: #555;
 }
 
 div.eapsi-hlikiwmenoi,
