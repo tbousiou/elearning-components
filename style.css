@@ -1,4 +1,4 @@
-/* Built on Wed Jan 21 14:15:39 EET 2026 */
+/* Built on Τετ 21 Ιαν 2026 18:04:42 EET */
 
 /* General Styles */
 html {
@@ -310,10 +310,14 @@ div.eapsi-esamea ul ul {
   margin-right: -100px;
 }
 
+.c4l-figure.extra-wide-caption figcaption {
+  margin-left: -150px;
+  margin-right: -150px;
+}
+
 @media (max-width: 768px) {
-  .c4l-figure.wide-caption figcaption {
+  .c4l-figure.wide-caption figcaption, .c4l-figure.extra-wide-caption figcaption {
     margin-left: 0;
     margin-right: 0;
   }
 }
-

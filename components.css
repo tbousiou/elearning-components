@@ -256,8 +256,13 @@
   margin-right: -100px;
 }
 
+.c4l-figure.extra-wide-caption figcaption {
+  margin-left: -150px;
+  margin-right: -150px;
+}
+
 @media (max-width: 768px) {
-  .c4l-figure.wide-caption figcaption {
+  .c4l-figure.wide-caption figcaption, .c4l-figure.extra-wide-caption figcaption {
     margin-left: 0;
     margin-right: 0;
   }
