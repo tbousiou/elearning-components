@@ -1,4 +1,4 @@
-/* Built on Δευ 19 Ιαν 2026 22:35:51 EET */
+/* Built on Wed Jan 21 14:15:39 EET 2026 */
 
 /* General Styles */
 html {
@@ -301,5 +301,19 @@ div.eapsi-esamea ul ul {
     font-size: 1rem;      /* Was 16px */
     color: #555;      /* Stylized caption text */
     text-align: left;
+}
+
+
+/* Προσθήκη wide caption class */
+.c4l-figure.wide-caption figcaption {
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+@media (max-width: 768px) {
+  .c4l-figure.wide-caption figcaption {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 

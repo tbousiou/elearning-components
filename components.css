@@ -248,3 +248,17 @@
     color: #555;      /* Stylized caption text */
     text-align: left;
 }
+
+
+/* Προσθήκη wide caption class */
+.c4l-figure.wide-caption figcaption {
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+@media (max-width: 768px) {
+  .c4l-figure.wide-caption figcaption {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
