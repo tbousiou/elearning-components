@@ -1,4 +1,4 @@
-/* Built on Τετ 21 Ιαν 2026 18:04:42 EET */
+/* Built on Πεμ 22 Ιαν 2026 09:45:39 EET */
 
 /* General Styles */
 html {
@@ -15,7 +15,6 @@ a.external-link::after {
  color: #555;
 }
 
-div.eapsi-hlikiwmenoi,
 div.eapsi-esamea {
     font-size: 1.25rem;
     line-height: 1.5;
@@ -23,33 +22,31 @@ div.eapsi-esamea {
     color: #555555;
 }
 
-div.eapsi-hlikiwmenoi p,
 div.eapsi-esamea p {
     font-size: 1.25rem;
     color: #555555;
-
 }
 
-div.eapsi-hlikiwmenoi li,
 div.eapsi-esamea li {
     padding-left: 2.5%;
 }
 
-div.eapsi-hlikiwmenoi summary,
 div.eapsi-esamea summary {
     cursor: pointer;
     line-height: 2.4rem !important;
 }
 
-div.eapsi-hlikiwmenoi details p,
 div.eapsi-esamea details p {
     padding-left: 2.5%;
     margin-top: 10px;
 }
 
-div.eapsi-hlikiwmenoi ul ul,
 div.eapsi-esamea ul ul {
     list-style-type: circle !important;
+}
+
+div.eapsi-esamea ul ul ul {
+    list-style-type: square !important;
 }
 /* Components Styles */
 /* Attention (Σημαντική πληροφορία) */
