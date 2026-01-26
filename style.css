@@ -1,4 +1,4 @@
-/* Built on Πεμ 22 Ιαν 2026 09:45:39 EET */
+/* Built on Δευ 26 Ιαν 2026 19:53:34 EET */
 
 /* General Styles */
 html {
@@ -10,9 +10,9 @@ html {
 }
 
 a.external-link::after {
- /* Syntax: content: "visible text" / "accessible description"; */
- content: " (ανοίγει σε νέα καρτέλα) ↗" / " (ανοίγει σε νέα καρτέλα)";
- color: #555;
+    /* Syntax: content: "visible text" / "accessible description"; */
+    content: " (ανοίγει σε νέα καρτέλα) ↗" / " (ανοίγει σε νέα καρτέλα)";
+    color: #555;
 }
 
 div.eapsi-esamea {
@@ -47,6 +47,37 @@ div.eapsi-esamea ul ul {
 
 div.eapsi-esamea ul ul ul {
     list-style-type: square !important;
+}
+
+
+.custom-data-table {
+    margin: 40px 0;
+    /* Spacing between tables */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-data-table caption {
+    padding: 20px 0 10px 0;
+    font-size: 1.1em;
+}
+
+.custom-data-table thead th {
+    background-color: #007bff !important;
+    color: white;
+    padding: 15px;
+}
+
+.custom-data-table th,
+.custom-data-table td {
+    padding: 18px !important;
+    line-height: 1.5 !important;
+    vertical-align: top !important;
+    font-size: 1.1em !important;
+}
+
+/* Styling for the row headers (accessibility column) */
+.custom-data-table tbody th {
+    background-color: unset !important;
 }
 /* Components Styles */
 /* Attention (Σημαντική πληροφορία) */
