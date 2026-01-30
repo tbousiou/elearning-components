@@ -137,6 +137,35 @@
 }
 
 
+/* Mobile Tip */
+.c4l-tip-mobile,
+.c4lv-tip-mobile {
+    min-width: 200px;
+    max-width: 99%;
+    background-color: #DCD9ED;
+    padding: 24px 48px 30px 36px;
+    border: none;
+    border-left: 6px solid #7317CF;
+    margin: 36px auto;
+    position: relative;
+    border-radius: 0;
+}
+
+.c4l-tip-mobile p:last-of-type,
+.c4lv-tip-mobile p:last-of-type {
+    margin-bottom: 0;
+}
+
+.c4l-tip-mobile::after,
+.c4lv-tip-mobile::after {
+    content: url("data:image/svg+xml;charset=UTF-8,<svg width='32' height='30' viewBox='0 0 32 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.5 28H28.5V30L31.5 28Z' fill='%234a0e5c'/><path d='M0.5 4C0.5 1.79086 2.29086 0 4.5 0H31.5V28H4.5C2.29086 28 0.5 26.2091 0.5 24V4Z' fill='%237317CF'/><rect x='10' y='6' width='12' height='18' rx='2' fill='white'/><rect x='11.5' y='7.5' width='9' height='13' fill='%237317CF'/><circle cx='16' cy='22.5' r='1' fill='white'/></svg>");
+    position: absolute;
+    top: 6px;
+    right: -3px;
+}
+
+
+
 /* Learning Outcomes (Μαθησιακά αποτελέσματα) */
 .c4l-learningoutcomes,
 .c4lv-learningoutcomes {

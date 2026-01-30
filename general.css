@@ -15,27 +15,15 @@ a.external-link::after {
 div.eapsi-esamea {
     font-size: 1.25rem;
     line-height: 1.5;
-    font-style: 400;
-    color: #555555;
 }
 
 div.eapsi-esamea p {
     font-size: 1.25rem;
-    color: #555555;
+ 
 }
 
 div.eapsi-esamea li {
     padding-left: 2.5%;
-}
-
-div.eapsi-esamea summary {
-    cursor: pointer;
-    line-height: 2.4rem !important;
-}
-
-div.eapsi-esamea details p {
-    padding-left: 2.5%;
-    margin-top: 10px;
 }
 
 div.eapsi-esamea ul ul {
@@ -46,7 +34,7 @@ div.eapsi-esamea ul ul ul {
     list-style-type: square !important;
 }
 
-
+/* Custom Data Table Styling */
 .custom-data-table {
     margin: 40px 0;
     /* Spacing between tables */
@@ -75,4 +63,20 @@ div.eapsi-esamea ul ul ul {
 /* Styling for the row headers (accessibility column) */
 .custom-data-table tbody th {
     background-color: unset !important;
+}
+
+/* Note block with icon */
+.note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-left: 0px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.note::before {
+    content: "➲" / "Επισήμανση";
+    font-size: 1.2em;
+    flex-shrink: 0;
 }
