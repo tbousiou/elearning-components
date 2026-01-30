@@ -1,4 +1,4 @@
-/* Built on Παρ 30 Ιαν 2026 18:04:36 EET */
+/* Built on Παρ 30 Ιαν 2026 18:22:35 EET */
 
 /* General Styles */
 html {
@@ -68,15 +68,17 @@ div.eapsi-esamea ul ul ul {
     background-color: unset !important;
 }
 
+/* Components Styles */
+
 /* Note block with icon */
-.note {
+.c4l-note {
     position: relative;
     padding-left: 40px;
     margin: 20px 0;
    
 }
 
-.note::before {
+.c4l-note::before {
     content: "➲" / "Επισήμανση";
     position: absolute;
     left: 0;
@@ -85,8 +87,6 @@ div.eapsi-esamea ul ul ul {
     
 }
 
-
-/* Components Styles */
 /* Attention (Σημαντική πληροφορία) */
 .c4l-attention,
 .c4lv-attention {
